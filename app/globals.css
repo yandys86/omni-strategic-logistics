@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: theme("colors.navy.DEFAULT");
+  color: theme("colors.cream");
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: theme("colors.gold.DEFAULT");
+  color: theme("colors.navy.deep");
+}
