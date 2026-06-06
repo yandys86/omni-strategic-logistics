@@ -3,6 +3,7 @@ import type { Lang } from "@/lib/i18n";
 export type Service = {
   slug: string;
   icon: string;
+  image: string;
   i18n: Record<Lang, {
     name: string;
     short: string;
@@ -15,6 +16,7 @@ export const SERVICES: Service[] = [
   {
     slug: "construccion",
     icon: "construction",
+    image: "/services/construccion.jpg",
     i18n: {
       es: {
         name: "Construccion",
@@ -43,6 +45,7 @@ export const SERVICES: Service[] = [
   {
     slug: "roofing",
     icon: "roof",
+    image: "/services/roofing.jpg",
     i18n: {
       es: {
         name: "Techos (Roofing)",
@@ -71,6 +74,7 @@ export const SERVICES: Service[] = [
   {
     slug: "talas-arboles",
     icon: "tree",
+    image: "/services/talas-arboles.jpg",
     i18n: {
       es: {
         name: "Talas de Arboles",
@@ -99,6 +103,7 @@ export const SERVICES: Service[] = [
   {
     slug: "fire-mitigation",
     icon: "fire",
+    image: "/services/fire-mitigation.jpg",
     i18n: {
       es: {
         name: "Mitigacion de Incendios",
@@ -127,6 +132,7 @@ export const SERVICES: Service[] = [
   {
     slug: "stump-grinding",
     icon: "stump",
+    image: "/services/stump-grinding.jpg",
     i18n: {
       es: {
         name: "Stump Grinding",
@@ -155,6 +161,7 @@ export const SERVICES: Service[] = [
   {
     slug: "autos",
     icon: "car",
+    image: "/services/autos.jpg",
     i18n: {
       es: {
         name: "Compra de Autos",

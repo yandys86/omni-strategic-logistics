@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Icon from "@/components/Icon";
@@ -45,28 +46,44 @@ export default function ServicePage({ params }: { params: Params }) {
   const otherServices = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
-      <Link
-        href={`/${lang}#servicios`}
-        className="text-xs uppercase tracking-wide2 text-cream/60 hover:text-cream"
-      >
-        ← {dict.servicePageBack}
-      </Link>
-
-      <header className="mt-8 flex flex-col sm:flex-row sm:items-center gap-6">
-        <div className="size-16 rounded-2xl bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center text-navy-deep shrink-0">
-          <Icon name={service.icon} className="size-8" />
+    <main>
+      <section className="relative">
+        <div className="relative h-72 sm:h-96 overflow-hidden">
+          <Image
+            src={service.image}
+            alt={t.name}
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/65 to-navy-deep/15" />
         </div>
-        <div>
-          <div className="text-[10px] uppercase tracking-wide3 text-gold mb-1">
-            {dict.servicesEyebrow}
+        <div className="relative mx-auto max-w-5xl px-6 -mt-32 sm:-mt-40 pb-2">
+          <Link
+            href={`/${lang}#servicios`}
+            className="inline-block text-xs uppercase tracking-wide2 text-cream/70 hover:text-cream mb-6"
+          >
+            ← {dict.servicePageBack}
+          </Link>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+            <div className="size-16 rounded-2xl bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center text-navy-deep shrink-0 shadow-lg shadow-navy-deep/40">
+              <Icon name={service.icon} className="size-8" />
+            </div>
+            <div>
+              <div className="text-[10px] uppercase tracking-wide3 text-gold mb-1">
+                {dict.servicesEyebrow}
+              </div>
+              <h1 className="font-display text-4xl sm:text-5xl text-cream leading-tight">
+                {t.name}
+              </h1>
+              <p className="mt-2 text-cream/80">{t.short}</p>
+            </div>
           </div>
-          <h1 className="font-display text-4xl sm:text-5xl text-cream leading-tight">
-            {t.name}
-          </h1>
-          <p className="mt-2 text-cream/70">{t.short}</p>
         </div>
-      </header>
+      </section>
+
+      <div className="mx-auto max-w-5xl px-6 py-8 sm:py-12">
 
       <section className="mt-12 grid gap-10 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-6">
@@ -129,6 +146,7 @@ export default function ServicePage({ params }: { params: Params }) {
           ))}
         </div>
       </section>
+      </div>
     </main>
   );
 }
