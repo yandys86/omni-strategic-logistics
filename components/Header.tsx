@@ -16,7 +16,7 @@ const LINKS = [
 export default function Header({ lang }: { lang: Lang }) {
   const t = DICT[lang];
   return (
-    <header className="border-b border-navy-line bg-navy-deep/95 backdrop-blur sticky top-0 z-30">
+    <header className="border-b border-navy-line bg-navy-deep sticky top-0 z-30">
       <div className="mx-auto max-w-6xl px-6 py-3 flex items-center justify-between gap-4">
         <Link href={`/${lang}`} className="flex items-center gap-3">
           <Image
