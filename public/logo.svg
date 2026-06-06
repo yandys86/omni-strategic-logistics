@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Omni Strategic Logistics">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#1A3055"/>
+      <stop offset="1" stop-color="#06122A"/>
+    </radialGradient>
+    <linearGradient id="goldArm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E3C580"/>
+      <stop offset="0.55" stop-color="#C9A05B"/>
+      <stop offset="1" stop-color="#7E6231"/>
+    </linearGradient>
+    <linearGradient id="goldArmAlt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7E6231"/>
+      <stop offset="0.45" stop-color="#C9A05B"/>
+      <stop offset="1" stop-color="#E3C580"/>
+    </linearGradient>
+    <radialGradient id="medal" cx="50%" cy="35%" r="65%">
+      <stop offset="0" stop-color="#F3D89A"/>
+      <stop offset="0.6" stop-color="#C9A05B"/>
+      <stop offset="1" stop-color="#7E6231"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Outer navy disk + thin gold ring -->
+  <circle cx="100" cy="100" r="98" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#C9A05B" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#E3C580" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- 4 diagonal short arms (rotated 45°), drawn first so cardinals overlay them -->
+  <g transform="rotate(45 100 100)">
+    <polygon points="100,30 108,100 100,108 92,100" fill="url(#goldArmAlt)"/>
+    <polygon points="100,170 108,100 100,92 92,100" fill="url(#goldArm)"/>
+    <polygon points="30,100 100,108 108,100 100,92" fill="url(#goldArm)"/>
+    <polygon points="170,100 100,108 92,100 100,92" fill="url(#goldArmAlt)"/>
+  </g>
+
+  <!-- 4 long cardinal arms (N/E/S/W) — longer + bolder -->
+  <polygon points="100,8 113,100 100,113 87,100" fill="url(#goldArm)"/>
+  <polygon points="100,192 113,100 100,87 87,100" fill="url(#goldArmAlt)"/>
+  <polygon points="8,100 100,113 113,100 100,87" fill="url(#goldArmAlt)"/>
+  <polygon points="192,100 100,113 87,100 100,87" fill="url(#goldArm)"/>
+
+  <!-- Center medallion -->
+  <circle cx="100" cy="100" r="34" fill="url(#medal)"/>
+  <circle cx="100" cy="100" r="34" fill="none" stroke="#7E6231" stroke-width="1.2"/>
+  <circle cx="100" cy="100" r="30" fill="none" stroke="#FBF8F2" stroke-opacity="0.25" stroke-width="0.6"/>
+
+  <!-- Stylized "$" mark: bold dollar sign on medallion -->
+  <text x="100" y="115" font-family="Georgia, Times, serif" font-size="46" font-weight="700"
+        fill="#06122A" text-anchor="middle">$</text>
+</svg>

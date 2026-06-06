@@ -12,3 +12,26 @@ html, body {
   background: theme("colors.gold.DEFAULT");
   color: theme("colors.navy.deep");
 }
+
+/* Hero network: nodes gently pulse, lines fade in/out so the canvas feels alive */
+@keyframes nodePulse {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50%      { opacity: 1;    transform: scale(1.15); }
+}
+@keyframes linePulse {
+  0%, 100% { opacity: 0.08; }
+  50%      { opacity: 0.35; }
+}
+.node-pulse { animation: nodePulse 4s ease-in-out infinite; }
+.line-pulse { animation: linePulse 6s ease-in-out infinite; }
+
+/* Trust marquee: seamless left-scrolling strip */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 30s linear infinite; will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  .node-pulse, .line-pulse, .marquee-track { animation: none; }
+}

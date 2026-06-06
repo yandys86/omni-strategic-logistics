@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { DICT } from "@/lib/dictionaries";
 import type { Lang } from "@/lib/i18n";
 import { SITE } from "@/lib/site";
@@ -11,8 +12,11 @@ export default function Footer({ lang }: { lang: Lang }) {
     <footer className="mt-24 bg-navy-deep border-t border-navy-line">
       <div className="mx-auto max-w-6xl px-6 py-14 grid gap-10 sm:grid-cols-4 text-sm text-cream/70">
         <div className="sm:col-span-2">
-          <div className="font-display text-2xl text-cream">{SITE.legalName}</div>
-          <p className="mt-3 max-w-sm">{t.footerBlurb}</p>
+          <div className="flex items-center gap-3 mb-3">
+            <Image src="/logo.svg" alt={SITE.name} width={44} height={44} />
+            <div className="font-display text-2xl text-cream leading-tight">{SITE.legalName}</div>
+          </div>
+          <p className="mt-1 max-w-sm">{t.footerBlurb}</p>
           <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-gold/40 px-3 py-1 text-xs uppercase tracking-wide3 text-gold-light">
             ✓ {t.footerInsured}
           </div>

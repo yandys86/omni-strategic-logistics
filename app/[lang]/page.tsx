@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 import Hero from "@/components/Hero";
+import Marquee from "@/components/Marquee";
+import Stats from "@/components/Stats";
 import ServiceCard from "@/components/ServiceCard";
 import Icon from "@/components/Icon";
 import { DICT } from "@/lib/dictionaries";
@@ -15,6 +17,8 @@ export default function HomePage({ params }: { params: { lang: string } }) {
   return (
     <main>
       <Hero lang={lang} />
+
+      <Marquee lang={lang} />
 
       <section id="servicios" className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
         <header className="mb-12 max-w-2xl">
@@ -32,6 +36,8 @@ export default function HomePage({ params }: { params: { lang: string } }) {
           ))}
         </div>
       </section>
+
+      <Stats lang={lang} />
 
       <section className="bg-navy-deep border-y border-navy-line">
         <div className="mx-auto max-w-6xl px-6 py-20 grid lg:grid-cols-2 gap-10 items-center">
