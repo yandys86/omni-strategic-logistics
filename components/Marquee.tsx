@@ -1,23 +1,25 @@
 import type { Lang } from "@/lib/i18n";
 
 const ITEMS_ES = [
-  "Asegurados",
-  "Licenciados",
-  "Orlando, FL",
-  "Respuesta el mismo dia",
-  "Red de proveedores verificados",
-  "Sin costo de consulta",
-  "Servicio bilingue"
+  "Logistica",
+  "Comercio internacional",
+  "Brokerage",
+  "Importacion y exportacion",
+  "Florida, USA",
+  "Red verificada de socios",
+  "Servicio bilingue",
+  "Sin costo de consulta"
 ];
 
 const ITEMS_EN = [
-  "Insured",
-  "Licensed",
-  "Orlando, FL",
-  "Same-day response",
-  "Verified provider network",
-  "No consultation fee",
-  "Bilingual service"
+  "Logistics",
+  "International trade",
+  "Brokerage",
+  "Import and export",
+  "Florida, USA",
+  "Verified partner network",
+  "Bilingual service",
+  "No consultation fee"
 ];
 
 export default function Marquee({ lang }: { lang: Lang }) {

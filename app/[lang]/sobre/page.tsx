@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import { DICT } from "@/lib/dictionaries";
 import { isLang } from "@/lib/i18n";
+import { notFound } from "next/navigation";
+import { CATEGORIES, getServicesByCategory } from "@/lib/services";
 import { SITE } from "@/lib/site";
 import { whatsappLink } from "@/lib/whatsapp";
 
@@ -31,7 +32,7 @@ export default function AboutPage({ params }: { params: Params }) {
   const t = DICT[lang];
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16 sm:py-20">
+    <main className="mx-auto max-w-4xl px-6 py-16 sm:py-20">
       <header className="text-center mb-12">
         <div className="text-[10px] uppercase tracking-wide3 text-gold mb-3">
           {SITE.legalName}
@@ -39,16 +40,16 @@ export default function AboutPage({ params }: { params: Params }) {
         <h1 className="font-display text-4xl sm:text-5xl text-cream leading-tight">
           {t.aboutTitle}
         </h1>
-        <p className="mt-4 text-cream/70 text-lg">{t.aboutLead}</p>
+        <p className="mt-4 text-cream/70 text-lg max-w-2xl mx-auto">{t.aboutLead}</p>
       </header>
 
-      <article className="space-y-6 text-cream/80 text-lg leading-relaxed">
+      <article className="space-y-6 text-cream/80 text-lg leading-relaxed max-w-3xl mx-auto">
         <p>{t.aboutP1}</p>
         <p>{t.aboutP2}</p>
         <p>{t.aboutP3}</p>
       </article>
 
-      <div className="mt-12 grid sm:grid-cols-3 gap-4">
+      <div className="mt-16 grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
         {[
           { icon: "shield",    label: t.valuesProfessionalism, copy: t.valuesProfessionalismCopy },
           { icon: "check",     label: t.valuesSafety,          copy: t.valuesSafetyCopy },
@@ -64,7 +65,47 @@ export default function AboutPage({ params }: { params: Params }) {
         ))}
       </div>
 
-      <div className="mt-12 flex flex-wrap justify-center gap-3">
+      <section className="mt-20 pt-10 border-t border-navy-line">
+        <div className="text-[10px] uppercase tracking-wide3 text-gold mb-3 text-center">
+          {lang === "es" ? "Areas de negocio" : "Business areas"}
+        </div>
+        <h2 className="font-display text-3xl sm:text-4xl text-cream leading-tight text-center mb-12">
+          {lang === "es"
+            ? "Lo que coordinamos, area por area."
+            : "What we coordinate, area by area."}
+        </h2>
+
+        <div className="space-y-10">
+          {CATEGORIES.map((category) => {
+            const services = getServicesByCategory(category.key);
+            return (
+              <div key={category.key}>
+                <div className="text-[10px] uppercase tracking-wide3 text-gold mb-2">
+                  {category.eyebrow[lang]}
+                </div>
+                <div className="font-display text-2xl text-cream mb-5">
+                  {category.heading[lang]}
+                </div>
+                <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2 text-sm text-cream/80">
+                  {services.map((s) => (
+                    <li key={s.slug} className="flex gap-2">
+                      <span className="text-gold mt-0.5">✓</span>
+                      <Link
+                        href={`/${lang}/servicios/${s.slug}`}
+                        className="hover:text-cream hover:underline"
+                      >
+                        {s.i18n[lang].name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <div className="mt-16 flex flex-wrap justify-center gap-3">
         <a
           href={whatsappLink(lang)}
           target="_blank"

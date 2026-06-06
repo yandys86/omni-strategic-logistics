@@ -6,7 +6,7 @@ import ServiceCard from "@/components/ServiceCard";
 import Icon from "@/components/Icon";
 import { DICT } from "@/lib/dictionaries";
 import { isLang } from "@/lib/i18n";
-import { SERVICES } from "@/lib/services";
+import { CATEGORIES, getServicesByCategory } from "@/lib/services";
 import { whatsappLink, phoneLink } from "@/lib/whatsapp";
 
 export default function HomePage({ params }: { params: { lang: string } }) {
@@ -21,7 +21,7 @@ export default function HomePage({ params }: { params: { lang: string } }) {
       <Marquee lang={lang} />
 
       <section id="servicios" className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-        <header className="mb-12 max-w-2xl">
+        <header className="mb-16 max-w-2xl">
           <div className="text-[10px] uppercase tracking-wide3 text-gold mb-3">
             {t.servicesEyebrow}
           </div>
@@ -30,10 +30,32 @@ export default function HomePage({ params }: { params: { lang: string } }) {
           </h2>
           <p className="mt-4 text-cream/70">{t.servicesSub}</p>
         </header>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {SERVICES.map((s) => (
-            <ServiceCard key={s.slug} service={s} lang={lang} />
-          ))}
+
+        <div className="space-y-20">
+          {CATEGORIES.map((category) => {
+            const services = getServicesByCategory(category.key);
+            if (services.length === 0) return null;
+            return (
+              <div key={category.key} id={`area-${category.key}`} className="scroll-mt-24">
+                <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+                  <div>
+                    <div className="text-[10px] uppercase tracking-wide3 text-gold mb-2">
+                      {category.eyebrow[lang]}
+                    </div>
+                    <h3 className="font-display text-2xl sm:text-3xl text-cream leading-tight max-w-xl">
+                      {category.heading[lang]}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-cream/65 max-w-md">{category.description[lang]}</p>
+                </div>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {services.map((s) => (
+                    <ServiceCard key={s.slug} service={s} lang={lang} />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 

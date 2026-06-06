@@ -54,21 +54,21 @@ type Dict = {
 
 export const DICT: Record<Lang, Dict> = {
   es: {
-    brandTagline: "Soluciones completas, resultados que construyen.",
-    heroEyebrow: "Orlando, FL · Asegurados y licenciados",
-    heroTitle: "Conectamos tu proyecto con el proveedor correcto.",
+    brandTagline: "Logistica, comercio y brokerage sin fronteras.",
+    heroEyebrow: "Florida, USA · Operacion nacional e internacional",
+    heroTitle: "Conectamos negocios, mercancias y oportunidades.",
     heroSubtitle:
-      "Construccion, techos, talas, mitigacion de incendios y mas. Trabajamos con una red de proveedores de confianza para que vos no pierdas tiempo buscando.",
+      "Empresa estadounidense constituida en Florida, especializada en logistica, comercio internacional, brokerage, importacion y exportacion. Conectamos empresas, inversionistas y mercados.",
     ctaQuote: "Cotizar por WhatsApp",
     ctaCall: "Llamar ahora",
     ctaWhatsapp: "Hablar por WhatsApp",
     navServices: "Servicios",
     navAbout: "Sobre",
     navContact: "Contacto",
-    servicesEyebrow: "Nuestros servicios",
-    servicesHeading: "Todo lo que necesita tu propiedad, un solo punto de contacto.",
+    servicesEyebrow: "Areas de negocio",
+    servicesHeading: "Soluciones integrales en logistica, comercio y brokerage.",
     servicesSub:
-      "Tocá un servicio para ver los detalles y pedir presupuesto directo por WhatsApp.",
+      "Trabajamos en cuatro grandes areas. Toca cualquiera para ver el detalle y pedir una propuesta por WhatsApp.",
     valuesEyebrow: "Como trabajamos",
     valuesHeading: "Profesionalismo, seguridad y compromiso.",
     valuesProfessionalism: "Profesionalismo",
@@ -81,22 +81,22 @@ export const DICT: Record<Lang, Dict> = {
     valuesCommitmentCopy:
       "Hacemos seguimiento del trabajo de principio a fin para que la experiencia sea simple.",
     brokerEyebrow: "Como funcionamos",
-    brokerHeading: "Somos el puente entre vos y el especialista correcto.",
+    brokerHeading: "Intermediario estrategico entre las partes correctas.",
     brokerCopy:
-      "Omni Strategic Logistics no realiza los trabajos directamente. Nos especializamos en encontrar y verificar al proveedor correcto para tu proyecto. Vos nos contas que necesitas, nosotros coordinamos, y solo trabajas con profesionales asegurados y con experiencia.",
+      "Omni Strategic Logistics actua como intermediario estrategico entre compradores, vendedores, fabricantes, distribuidores e inversionistas. Identificamos oportunidades, negociamos los terminos y coordinamos la operacion. No reemplazamos al especialista: te conectamos con el correcto y aseguramos que la operacion se cierre.",
     ctaBlockEyebrow: "Tu proyecto, listo en pasos simples",
     ctaBlockTitle: "Contanos lo que necesitas. Nosotros nos encargamos del resto.",
     ctaBlockCopy:
       "Respondemos por WhatsApp en horario comercial. Sin compromiso, sin costo de consulta.",
-    aboutTitle: "Sobre Omni Strategic Logistics",
+    aboutTitle: "Perfil corporativo",
     aboutLead:
-      "Una empresa local que conecta personas con los profesionales correctos para cada trabajo.",
+      "Empresa estadounidense con base en Florida, especializada en logistica, comercio internacional, brokerage y desarrollo de oportunidades.",
     aboutP1:
-      "Omni Strategic Logistics LLC es una empresa con base en Orlando, Florida, que trabaja como puente entre clientes y una red de proveedores de servicios verificados.",
+      "Omni Strategic Logistics LLC es una empresa estadounidense constituida en el Estado de Florida. Brindamos soluciones integrales de logistica, comercio internacional, corretaje comercial (brokerage), importacion y exportacion, facilitando oportunidades de negocio entre empresas, inversionistas y mercados nacionales e internacionales.",
     aboutP2:
-      "Operamos en multiples verticales: construccion, techos, talas y trimming de arboles, mitigacion de incendios, stump grinding y asistencia en la compra de autos. En cada categoria seleccionamos proveedores asegurados, licenciados y con historial comprobado.",
+      "Nuestra compania se especializa en la identificacion, negociacion y desarrollo de oportunidades comerciales en diversos sectores economicos. Actuamos como intermediario estrategico entre compradores, vendedores, fabricantes, distribuidores e inversionistas, agregando valor en cada etapa de la operacion.",
     aboutP3:
-      "Nuestra ventaja es la red, no las herramientas. Si necesitas un techo nuevo, talar un arbol, o un auto, vos hablas con nosotros una sola vez y coordinamos al especialista correcto. Sin intermediarios extras, sin perder tiempo pidiendo presupuestos sueltos.",
+      "Operamos en cuatro grandes areas: logistica y comercio internacional, brokerage y consultoria, servicios para propiedad en Florida Central, y comercio y distribucion. Cada area cuenta con una red de socios estrategicos verificados que nos permite ejecutar operaciones desde una pequena transaccion hasta un proyecto industrial o internacional.",
     contactTitle: "Hablemos",
     contactLead:
       "Respondemos rapido por WhatsApp. Contanos tu necesidad y te conectamos con el proveedor correcto.",
@@ -109,7 +109,7 @@ export const DICT: Record<Lang, Dict> = {
     servicePageGetQuote: "Pedir presupuesto por WhatsApp",
     servicePageWhatYouGet: "Lo que coordinamos",
     footerBlurb:
-      "Conectamos clientes con proveedores asegurados y licenciados en Florida.",
+      "Logistica, comercio internacional, brokerage y desarrollo de oportunidades. Con base en Florida, operacion nacional e internacional.",
     footerServicesTitle: "Servicios",
     footerCompanyTitle: "Empresa",
     footerContactTitle: "Contacto",
@@ -119,21 +119,21 @@ export const DICT: Record<Lang, Dict> = {
       `Hola Omni Strategic Logistics, me interesa el servicio de ${service}. Quisiera mas informacion y un presupuesto.`
   },
   en: {
-    brandTagline: "Complete solutions, results that build.",
-    heroEyebrow: "Orlando, FL · Insured and licensed",
-    heroTitle: "We connect your project with the right provider.",
+    brandTagline: "Logistics, trade, and brokerage without borders.",
+    heroEyebrow: "Florida, USA · Domestic and international operation",
+    heroTitle: "We connect businesses, goods, and opportunities.",
     heroSubtitle:
-      "Construction, roofing, tree work, fire mitigation and more. We work with a trusted provider network so you don't waste time searching.",
+      "A US company incorporated in Florida, specialized in logistics, international trade, brokerage, import, and export. We connect companies, investors, and markets.",
     ctaQuote: "Get a quote on WhatsApp",
     ctaCall: "Call now",
     ctaWhatsapp: "Chat on WhatsApp",
     navServices: "Services",
     navAbout: "About",
     navContact: "Contact",
-    servicesEyebrow: "Our services",
-    servicesHeading: "Everything your property needs, one point of contact.",
+    servicesEyebrow: "Business areas",
+    servicesHeading: "Integrated solutions across logistics, trade, and brokerage.",
     servicesSub:
-      "Tap a service to see details and request a quote directly on WhatsApp.",
+      "We operate across four areas. Tap any to see details and request a proposal on WhatsApp.",
     valuesEyebrow: "How we work",
     valuesHeading: "Professionalism, safety, and commitment.",
     valuesProfessionalism: "Professionalism",
@@ -146,22 +146,22 @@ export const DICT: Record<Lang, Dict> = {
     valuesCommitmentCopy:
       "We follow the work from start to finish so your experience stays simple.",
     brokerEyebrow: "How it works",
-    brokerHeading: "We are the bridge between you and the right specialist.",
+    brokerHeading: "Strategic intermediary between the right parties.",
     brokerCopy:
-      "Omni Strategic Logistics does not perform the work directly. We specialize in finding and verifying the right provider for your project. You tell us what you need, we coordinate, and you only work with insured, experienced professionals.",
+      "Omni Strategic Logistics acts as a strategic intermediary between buyers, sellers, manufacturers, distributors, and investors. We identify opportunities, negotiate terms, and coordinate the operation. We do not replace the specialist: we connect you with the right one and make sure the deal closes.",
     ctaBlockEyebrow: "Your project, ready in simple steps",
     ctaBlockTitle: "Tell us what you need. We take care of the rest.",
     ctaBlockCopy:
       "We reply on WhatsApp during business hours. No commitment, no consultation fee.",
-    aboutTitle: "About Omni Strategic Logistics",
+    aboutTitle: "Corporate profile",
     aboutLead:
-      "A local company connecting people with the right professionals for every job.",
+      "A US company based in Florida, specialized in logistics, international trade, brokerage, and opportunity development.",
     aboutP1:
-      "Omni Strategic Logistics LLC is an Orlando, Florida based company that works as a bridge between customers and a network of verified service providers.",
+      "Omni Strategic Logistics LLC is a US company incorporated in the State of Florida. We provide integrated solutions across logistics, international trade, commercial brokerage, import, and export, facilitating business opportunities between companies, investors, and domestic and international markets.",
     aboutP2:
-      "We operate across multiple verticals: construction, roofing, tree removal and trimming, fire mitigation, stump grinding, and vehicle purchase assistance. In each category we hand-pick providers that are insured, licensed, and have a proven track record.",
+      "We specialize in the identification, negotiation, and development of commercial opportunities across diverse economic sectors. We act as strategic intermediary between buyers, sellers, manufacturers, distributors, and investors, adding value at every stage of the operation.",
     aboutP3:
-      "Our edge is the network, not the tools. If you need a new roof, a tree removed, or a vehicle, you talk to us once and we line up the right specialist. No extra middlemen, no wasted time chasing scattered quotes.",
+      "We operate across four areas: logistics and international trade, brokerage and consulting, property services in Central Florida, and trade and distribution. Each area is backed by a network of verified strategic partners that lets us execute from a small transaction to an industrial or international project.",
     contactTitle: "Let's talk",
     contactLead:
       "We reply fast on WhatsApp. Tell us what you need and we connect you with the right provider.",
@@ -174,7 +174,7 @@ export const DICT: Record<Lang, Dict> = {
     servicePageGetQuote: "Get a quote on WhatsApp",
     servicePageWhatYouGet: "What we coordinate",
     footerBlurb:
-      "We connect customers with insured and licensed providers in Florida.",
+      "Logistics, international trade, brokerage, and opportunity development. Based in Florida, operating domestically and internationally.",
     footerServicesTitle: "Services",
     footerCompanyTitle: "Company",
     footerContactTitle: "Contact",

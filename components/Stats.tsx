@@ -3,10 +3,10 @@ import type { Lang } from "@/lib/i18n";
 type Stat = { value: string; label: { es: string; en: string } };
 
 const STATS: Stat[] = [
-  { value: "100+",  label: { es: "Proyectos coordinados",      en: "Projects coordinated" } },
-  { value: "20+",   label: { es: "Proveedores en la red",      en: "Network providers" } },
-  { value: "6",     label: { es: "Verticales de servicio",     en: "Service verticals" } },
-  { value: "100%",  label: { es: "Asegurados y licenciados",   en: "Insured and licensed" } }
+  { value: "17",    label: { es: "Servicios disponibles",       en: "Available services" } },
+  { value: "4",     label: { es: "Areas de negocio",            en: "Business areas" } },
+  { value: "50+",   label: { es: "Socios estrategicos",         en: "Strategic partners" } },
+  { value: "USA",   label: { es: "LLC constituida en Florida",  en: "LLC incorporated in Florida" } }
 ];
 
 export default function Stats({ lang }: { lang: Lang }) {
