@@ -48,16 +48,33 @@ export default function ServicePage({ params }: { params: Params }) {
   return (
     <main>
       <section className="relative">
-        <div className="relative h-72 sm:h-96 overflow-hidden">
-          <Image
-            src={service.image}
-            alt={t.name}
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/65 to-navy-deep/15" />
+        <div className="relative h-72 sm:h-96 overflow-hidden bg-navy-deep">
+          {service.image ? (
+            <>
+              <Image
+                src={service.image}
+                alt={t.name}
+                fill
+                sizes="100vw"
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/65 to-navy-deep/15" />
+            </>
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-navy-light via-navy to-navy-deep">
+              <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_center,#ffffff_1px,transparent_1px)] [background-size:24px_24px]" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative">
+                  <div className="absolute -inset-12 rounded-full bg-gold/20 blur-3xl" />
+                  <div className="relative size-32 rounded-3xl bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center text-navy-deep">
+                    <Icon name={service.icon} className="size-16" />
+                  </div>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 to-transparent" />
+            </div>
+          )}
         </div>
         <div className="relative mx-auto max-w-5xl px-6 -mt-32 sm:-mt-40 pb-2">
           <Link
